@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Project Kalkulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: bisque;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+        .container { 
+            background-color: #1d1d1d;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        .calc-text { 
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+        .calc-text p { 
+            width: 100%;
+            font-size: 3.5rem;
+            text-align: end;
+            background: transparent;
+            color: #fff;
+            border: none;
+            outline: none;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        button {
+            background: #333333;
+            color: #fff;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 70%;
+            cursor: pointer;
+            height: 65px;
+            width: 65px;
+        }
+
+        button:active,
+        button:focus {
+        filter: brightness(120%);
+        }
+
+        .calc-keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 15px;
+            grid-column-gap: 10px;
+        }
+
+        .key-zero {
+            grid-column: span 2;
+            width: 100%;
+            border-radius: 30px;
+        }
+
+        .key-operate {
+         background: #ff9501;
+        }
+
+        .key-others {
+            background: #a6a6a6;
+            color: #000000;
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calc-text">
+            <p name="user-input" id="user-input">0</p>
+        </div>
+
+        <div class="calc-keys"> 
+            <button type="button" class="key-others operations">AC</button>
+            <button type="button" class="key-others operations">DEL</button>
+            <button type="button" class="key-others operations">%</button>
+            <button type="button" class="key-operate operations">/</button>
+            <button type="button" class="numbers">7</button>
+            <button type="button" class="numbers">8</button>
+            <button type="button" class="numbers">9</button>
+            <button type="button" class="key-operate operations">*</button>
+            <button type="button" class="numbers">4</button>
+            <button type="button" class="numbers">5</button>
+            <button type="button" class="numbers">6</button>
+            <button type="button" class="key-operate operations">-</button>
+            <button type="button" class="numbers">1</button>
+            <button type="button" class="numbers">2</button>
+            <button type="button" class="numbers">3</button>
+            <button type="button" class="key-operate operations">+</button>
+            <button type="button" class="key-zero numbers">0</button>
+            <button type="button" class="numbers">.</button>
+            <button type="button" class="key-operate operations">=</button>
+        </div>
+    </div>
+
+    <script src="/Day-3/project/script.js"></script>
+</body>
+</html>
